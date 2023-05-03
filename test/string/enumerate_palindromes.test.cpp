@@ -1,5 +1,5 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/zalgorithm"
-#include "string/z.hpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/enumerate_palindromes"
+#include "string/manacher.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 using i64 = long long;
@@ -8,7 +8,7 @@ int main() {
     cin.tie(nullptr);
     string s;
     cin >> s;
-    for (int zi : z_function(s)) {
-        cout << zi << " ";
+    for (int mi : manacher(s)) {
+        cout << mi << " ";
     }
 }
