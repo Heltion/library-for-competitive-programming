@@ -1,7 +1,10 @@
+#pragma once
 #include <functional>
 #include <iostream>
+#include <vector>
 
 using i64 = int64_t;
+using u64 = uint64_t;
 
 struct IO {
     IO() {
@@ -27,3 +30,17 @@ void repeat(int n, std::function<void()> &&f) {
         f();
     }
 }
+
+void repeat(int n, std::function<void(int)> &&f) {
+    for (int i = 0; i < n; i += 1) {
+        f(i);
+    }
+}
+
+void repeat(int l, int r, std::function<void(int)> &&f) {
+    for (int i = l; i < r; i += 1) {
+        f(i);
+    }
+}
+
+void choose(int n, std::vector<std::function<void()>> &&vf) { vf[n](); }
