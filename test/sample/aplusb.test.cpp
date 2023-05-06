@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
-#include "io/io.hpp"
+#include "core.hpp"
 #include <string>
 int main() {
     IO io;

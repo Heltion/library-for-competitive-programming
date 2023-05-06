@@ -1,5 +1,8 @@
+#include <functional>
 #include <iostream>
-struct VectorIO {};
+
+using i64 = int64_t;
+
 struct IO {
     IO() {
         std::ios::sync_with_stdio(false);
@@ -15,3 +18,9 @@ struct IO {
         return *this;
     }
 };
+
+void repeat(int n, std::function<void()> &&f) {
+    for (int i = 0; i < n; i += 1) {
+        f();
+    }
+}
