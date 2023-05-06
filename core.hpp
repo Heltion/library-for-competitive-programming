@@ -13,9 +13,12 @@ struct IO {
         std::cin >> t;
         return t;
     }
-    template <typename T> IO &operator<<(const T &t) {
+    template <typename T> const IO &operator<<(const T &t) const {
         std::cout << t;
         return *this;
+    }
+    template <typename T> bool operator==(const T &t) const {
+        return T(*this) == t;
     }
 };
 

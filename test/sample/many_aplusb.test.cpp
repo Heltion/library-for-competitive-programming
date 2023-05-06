@@ -1,6 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/many_aplusb"
 #include "core.hpp"
-#include <string>
 int main() {
     IO io;
     repeat(io, [&] {
