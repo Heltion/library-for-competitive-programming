@@ -1,7 +1,11 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
-#include "core.hpp"
+
+#include <bits/stdc++.h>
+using namespace std;
 int main() {
-    IO io;
-    int a = io, b = io;
-    io << a + b;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int a, b;
+    cin >> a >> b;
+    cout << a + b;
 }
